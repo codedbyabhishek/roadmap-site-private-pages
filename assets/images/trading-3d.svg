@@ -1,22 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760">
   <defs>
-    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#e0f2fe"/>
-      <stop offset="100%" stop-color="#f8fafc"/>
-    </linearGradient>
-    <linearGradient id="face" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#14b8a6"/>
-      <stop offset="100%" stop-color="#0f172a"/>
-    </linearGradient>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#dbeafe"/><stop offset="100%" stop-color="#f8fafc"/></linearGradient>
+    <linearGradient id="front" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#10b981"/><stop offset="100%" stop-color="#064e3b"/></linearGradient>
   </defs>
-  <rect width="900" height="520" fill="url(#sky)"/>
-  <polygon points="160,350 430,240 700,350 430,460" fill="#cbd5e1"/>
-  <polygon points="320,180 560,180 700,300 460,300" fill="url(#face)" opacity="0.95"/>
-  <polygon points="220,230 320,180 460,300 360,350" fill="#334155"/>
-  <polygon points="460,300 700,300 600,350 360,350" fill="#475569"/>
-  <rect x="390" y="260" width="70" height="90" fill="#94a3b8"/>
-  <rect x="510" y="250" width="65" height="45" fill="#bfdbfe"/>
-  <circle cx="745" cy="110" r="32" fill="#fde68a"/>
-  <text x="50" y="70" font-family="Manrope, Arial" font-size="30" font-weight="700" fill="#0f172a">Trading 3D Concept</text>
-  <text x="50" y="102" font-family="Manrope, Arial" font-size="18" fill="#334155">Exterior massing and operations-ready layout concept</text>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <ellipse cx="620" cy="620" rx="360" ry="70" fill="#94a3b8" opacity="0.5"/>
+  <polygon points="290,470 560,340 930,470 660,600" fill="#1e293b"/>
+  <polygon points="430,230 760,230 930,470 600,470" fill="url(#front)"/>
+  <polygon points="290,470 430,230 600,470 460,600" fill="#334155"/>
+  <rect x="575" y="385" width="90" height="160" fill="#e2e8f0"/>
+  <rect x="470" y="320" width="80" height="70" fill="#bfdbfe"/>
+  <rect x="700" y="320" width="80" height="70" fill="#bfdbfe"/>
+  <text x="70" y="80" font-size="34" font-family="Manrope,Arial" font-weight="800" fill="#0f172a">Trading Office 3D Concept</text>
+  <text x="70" y="116" font-size="20" font-family="Manrope,Arial" fill="#334155">Glass facade + analytics war room + training bay integration</text>
 </svg>
