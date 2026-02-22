@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Private Roadmap</title>
+    <meta name="description" content="Password-gated roadmap website hosted on GitHub Pages." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header wrapper">
+      <div class="header-row">
+        <div>
+          <h1 id="title">Roadmap</h1>
+          <p id="subtitle" class="subtitle"></p>
+        </div>
+        <button id="logout" type="button">Logout</button>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <section>
+        <h2>Tracks</h2>
+        <div id="tracks" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Milestones</h2>
+        <div id="milestones" class="timeline"></div>
+      </section>
+
+      <section>
+        <h2>Resources</h2>
+        <div class="card">
+          <ul id="resources"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrapper">
+      Private repo + GitHub Pages demo with client-side password gate.
+    </footer>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>
+      window.roadmapAuth.requireAuth();
+    </script>
+    <script src="./assets/js/roadmap.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>

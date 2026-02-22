@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Roadmap Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <main class="login-wrap">
+      <section class="login-card" aria-labelledby="login-title">
+        <h1 id="login-title">Private Roadmap</h1>
+        <p class="helper">Enter the access password to view the roadmap.</p>
+
+        <form id="login-form" novalidate>
+          <label for="password">Password</label>
+          <input id="password" name="password" type="password" required autocomplete="current-password" />
+          <div class="error" id="error"></div>
+          <button type="submit">Unlock</button>
+        </form>
+
+        <p class="helper">This is a client-side gate for GitHub Pages. Use real auth for sensitive data.</p>
+      </section>
+    </main>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>
+      (function initLogin() {
+        if (window.roadmapAuth.isSessionActive()) {
+          window.location.href = "./index.html";
+          return;
+        }
+
+        const form = document.getElementById("login-form");
+        const error = document.getElementById("error");
+        const input = document.getElementById("password");
+
+        form.addEventListener("submit", async (event) => {
+          event.preventDefault();
+          error.textContent = "";
+
+          const entered = input.value.trim();
+          if (!entered) {
+            error.textContent = "Password is required.";
+            return;
+          }
+
+          const hash = await window.roadmapAuth.sha256(entered);
+          if (hash === window.roadmapAuth.PASSWORD_HASH) {
+            window.roadmapAuth.storeSession();
+            window.location.href = "./index.html";
+            return;
+          }
+
+          error.textContent = "Incorrect password.";
+        });
+      })();
+    </script>
+  </body>
+</html>
