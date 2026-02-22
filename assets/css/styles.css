@@ -203,12 +203,18 @@ label {
   font-weight: 700;
 }
 
-input {
+input,
+select {
   width: 100%;
   border: 1px solid #cbd5e1;
   border-radius: 10px;
   padding: 0.75rem;
   font-size: 1rem;
+  background: #fff;
+}
+
+.control-card {
+  max-width: 520px;
 }
 
 .helper {

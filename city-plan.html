@@ -3,10 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Full Scale Plan</title>
+    <title>City Scenario Planner</title>
     <meta
       name="description"
-      content="Detailed startup budgets and monthly targets for trading, restaurant, hotel, and farming network."
+      content="City-specific startup budgets and break-even estimates for trading, restaurant, hotel and farming businesses."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,12 +20,12 @@
     <header class="header wrapper">
       <div class="header-row">
         <div>
-          <h1 id="scale-title">Full Scale Network Plan</h1>
-          <p id="scale-subtitle" class="subtitle"></p>
+          <h1 id="city-title">City Scenario Planner</h1>
+          <p id="city-subtitle" class="subtitle"></p>
         </div>
         <div class="top-actions">
           <a class="button button-ghost" href="./index.html">Blueprint</a>
-          <a class="button button-ghost" href="./city-plan.html">City Planner</a>
+          <a class="button button-ghost" href="./scale.html">Full Scale</a>
           <button id="logout" type="button">Logout</button>
         </div>
       </div>
@@ -33,54 +33,52 @@
 
     <main class="wrapper">
       <section>
-        <h2>Capital Allocation</h2>
-        <div id="capital-cards" class="grid"></div>
+        <div class="card control-card">
+          <label for="city-select">Select City Scenario</label>
+          <select id="city-select"></select>
+          <p class="helper">Use this to compare conservative planning numbers across locations.</p>
+        </div>
       </section>
 
       <section>
-        <h2>Monthly Profit Targets</h2>
+        <h2>Startup Budget by Scenario</h2>
+        <div id="scenario-cards" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Break-Even Estimates</h2>
         <div class="table-wrap card">
           <table>
             <thead>
               <tr>
                 <th>Business Unit</th>
-                <th>Month 3</th>
-                <th>Month 6</th>
-                <th>Month 12</th>
-                <th>Main KPI</th>
+                <th>Low Case</th>
+                <th>Base Case</th>
+                <th>High Case</th>
+                <th>Main Driver</th>
               </tr>
             </thead>
-            <tbody id="profit-targets"></tbody>
+            <tbody id="breakeven-table"></tbody>
           </table>
         </div>
       </section>
 
       <section>
-        <h2>Execution Roadmap</h2>
-        <div id="execution-phases" class="timeline"></div>
-      </section>
-
-      <section>
-        <h2>Team Buildout</h2>
-        <div id="team-plan" class="grid"></div>
-      </section>
-
-      <section>
-        <h2>Risk Gates Before Scaling</h2>
+        <h2>City Notes</h2>
         <div class="card">
-          <ul id="risk-gates" class="rule-list"></ul>
+          <ul id="city-notes" class="rule-list"></ul>
         </div>
       </section>
     </main>
 
-    <footer class="wrapper">Numbers are planning targets; validate with real local costs and legal advisors.</footer>
+    <footer class="wrapper">Planning estimates only. Validate with local permits, taxes, and market pricing.</footer>
 
     <script src="./assets/js/auth.js"></script>
     <script>
       window.roadmapAuth.requireAuth();
     </script>
-    <script src="./assets/js/scale-data.js"></script>
-    <script src="./assets/js/scale-app.js"></script>
+    <script src="./assets/js/city-data.js"></script>
+    <script src="./assets/js/city-app.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
