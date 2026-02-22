@@ -5,8 +5,10 @@
   const title = document.getElementById("title");
   const subtitle = document.getElementById("subtitle");
   const tracks = document.getElementById("tracks");
+  const network = document.getElementById("network");
   const milestones = document.getElementById("milestones");
   const resources = document.getElementById("resources");
+  const rules = document.getElementById("rules");
 
   title.textContent = data.title;
   subtitle.textContent = data.subtitle;
@@ -53,6 +55,27 @@
     li.appendChild(a);
     resources.appendChild(li);
   });
+
+  if (network && Array.isArray(data.network)) {
+    data.network.forEach((node, idx) => {
+      const article = document.createElement("article");
+      article.className = `node ${idx === 0 ? "node-core" : ""}`;
+      article.innerHTML = `
+        <h3>${node.name}</h3>
+        <span class="badge progress">${node.role}</span>
+        <p>${node.note}</p>
+      `;
+      network.appendChild(article);
+    });
+  }
+
+  if (rules && Array.isArray(data.rules)) {
+    data.rules.forEach((rule) => {
+      const li = document.createElement("li");
+      li.textContent = rule;
+      rules.appendChild(li);
+    });
+  }
 })();
 
 (function wireActions() {

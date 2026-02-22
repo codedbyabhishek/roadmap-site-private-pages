@@ -129,6 +129,31 @@ section {
   gap: 0.85rem;
 }
 
+.network-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.node {
+  position: relative;
+  background: linear-gradient(145deg, #ffffff, #f1f5f9);
+  border: 1px solid #dbe4ee;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.node-core {
+  border-color: #0f4c5c;
+  background: linear-gradient(145deg, #e6f8f6, #ffffff);
+}
+
+.node p {
+  color: var(--muted);
+  margin: 0.65rem 0 0;
+}
+
 .milestone {
   border-left: 4px solid var(--accent);
   background: #fff;
@@ -187,6 +212,13 @@ footer {
   padding: 2rem 0 2.5rem;
   color: var(--muted);
   font-size: 0.9rem;
+}
+
+.rule-list {
+  margin: 0;
+  padding-left: 1rem;
+  display: grid;
+  gap: 0.65rem;
 }
 
 @media (max-width: 700px) {
