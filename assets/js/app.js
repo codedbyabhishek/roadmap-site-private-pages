@@ -7,6 +7,7 @@
   const tracks = document.getElementById("tracks");
   const network = document.getElementById("network");
   const milestones = document.getElementById("milestones");
+  const visuals = document.getElementById("visuals");
   const resources = document.getElementById("resources");
   const rules = document.getElementById("rules");
 
@@ -54,6 +55,25 @@
       <p>Deliverable: ${step.output}</p>
     `;
     if (milestones) milestones.appendChild(block);
+  });
+
+  (data.visuals || []).forEach((visual) => {
+    const card = document.createElement("article");
+    card.className = "visual-card";
+    card.innerHTML = `
+      <h3>${visual.name}</h3>
+      <div class="visual-pair">
+        <figure>
+          <img src="${visual.floor}" alt="${visual.name} floor plan" loading="lazy" />
+          <figcaption>Floor Plan</figcaption>
+        </figure>
+        <figure>
+          <img src="${visual.concept}" alt="${visual.name} 3D concept" loading="lazy" />
+          <figcaption>3D Concept</figcaption>
+        </figure>
+      </div>
+    `;
+    if (visuals) visuals.appendChild(card);
   });
 
   (data.resources || []).forEach((resource) => {

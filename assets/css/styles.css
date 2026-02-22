@@ -150,6 +150,51 @@ section {
   gap: 1rem;
 }
 
+.visual-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.visual-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  padding: 1rem;
+}
+
+.visual-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.65rem;
+}
+
+.visual-pair {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 0.8rem;
+}
+
+.visual-pair figure {
+  margin: 0;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #f8fafc;
+}
+
+.visual-pair img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.visual-pair figcaption {
+  font-size: 0.85rem;
+  color: #334155;
+  padding: 0.5rem 0.65rem;
+  border-top: 1px solid #e2e8f0;
+  background: #fff;
+}
+
 .node {
   position: relative;
   background: linear-gradient(145deg, #ffffff, #f1f5f9);

@@ -47,6 +47,38 @@ window.ROADMAP = {
     { week: "Quarter 3", focus: "Connect all units", output: "Farm-to-kitchen supply chain, bundled customer offers, mentorship funnel" },
     { week: "Quarter 4", focus: "Scale and systemize", output: "Second location/investment plan, dashboards, team-led operations" }
   ],
+  visuals: [
+    {
+      name: "Trading Capital Engine",
+      floor: "./assets/images/trading-floor.svg",
+      concept: "./assets/images/trading-3d.svg"
+    },
+    {
+      name: "Restaurant Business",
+      floor: "./assets/images/restaurant-floor.svg",
+      concept: "./assets/images/restaurant-3d.svg"
+    },
+    {
+      name: "Hotel / Homestay",
+      floor: "./assets/images/hotel-floor.svg",
+      concept: "./assets/images/hotel-3d.svg"
+    },
+    {
+      name: "Farming + Agri Sales",
+      floor: "./assets/images/farming-floor.svg",
+      concept: "./assets/images/farming-3d.svg"
+    },
+    {
+      name: "Education + Mentorship",
+      floor: "./assets/images/mentorship-floor.svg",
+      concept: "./assets/images/mentorship-3d.svg"
+    },
+    {
+      name: "Digital + Media Income",
+      floor: "./assets/images/digital-floor.svg",
+      concept: "./assets/images/digital-3d.svg"
+    }
+  ],
   resources: [
     { label: "Operating KPI Dashboard (Build One)", href: "#" },
     { label: "Restaurant Unit Economics Sheet", href: "#" },
