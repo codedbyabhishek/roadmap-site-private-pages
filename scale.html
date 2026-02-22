@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Full Scale Plan</title>
+    <meta
+      name="description"
+      content="Detailed startup budgets and monthly targets for trading, restaurant, hotel, and farming network."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header wrapper">
+      <div class="header-row">
+        <div>
+          <h1 id="scale-title">Full Scale Network Plan</h1>
+          <p id="scale-subtitle" class="subtitle"></p>
+        </div>
+        <div class="top-actions">
+          <a class="button button-ghost" href="./index.html">Blueprint</a>
+          <button id="logout" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <section>
+        <h2>Capital Allocation</h2>
+        <div id="capital-cards" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Monthly Profit Targets</h2>
+        <div class="table-wrap card">
+          <table>
+            <thead>
+              <tr>
+                <th>Business Unit</th>
+                <th>Month 3</th>
+                <th>Month 6</th>
+                <th>Month 12</th>
+                <th>Main KPI</th>
+              </tr>
+            </thead>
+            <tbody id="profit-targets"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section>
+        <h2>Execution Roadmap</h2>
+        <div id="execution-phases" class="timeline"></div>
+      </section>
+
+      <section>
+        <h2>Team Buildout</h2>
+        <div id="team-plan" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Risk Gates Before Scaling</h2>
+        <div class="card">
+          <ul id="risk-gates" class="rule-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrapper">Numbers are planning targets; validate with real local costs and legal advisors.</footer>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>
+      window.roadmapAuth.requireAuth();
+    </script>
+    <script src="./assets/js/scale-data.js"></script>
+    <script src="./assets/js/scale-app.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
