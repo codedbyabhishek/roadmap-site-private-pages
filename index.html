@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blank Project</title>
-    <meta name="description" content="Blank starter project hosted on GitHub Pages." />
+    <title>Business Network Blueprint</title>
+    <meta
+      name="description"
+      content="Multi-source income blueprint from trading, hospitality, and farming."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -17,8 +20,8 @@
     <header class="header wrapper">
       <div class="header-row">
         <div>
-          <h1>Blank Project</h1>
-          <p class="subtitle">This workspace is now reset and ready for new content.</p>
+          <h1 id="title">Business Network Blueprint</h1>
+          <p id="subtitle" class="subtitle"></p>
         </div>
         <button id="logout" type="button">Logout</button>
       </div>
@@ -26,19 +29,42 @@
 
     <main class="wrapper">
       <section>
+        <h2>Income Engines</h2>
+        <div id="tracks" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Network Map</h2>
+        <div id="network" class="network-grid"></div>
+      </section>
+
+      <section>
+        <h2>12-Month Scale Plan</h2>
+        <div id="milestones" class="timeline"></div>
+      </section>
+
+      <section>
+        <h2>Priority Assets</h2>
         <div class="card">
-          <h2>Start Here</h2>
-          <p>Replace this section with your new project content.</p>
+          <ul id="resources"></ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Execution Rules</h2>
+        <div class="card">
+          <ul id="rules" class="rule-list"></ul>
         </div>
       </section>
     </main>
 
-    <footer class="wrapper">Blank starter with login gate.</footer>
+    <footer class="wrapper">Private plan dashboard with client-side password gate.</footer>
 
     <script src="./assets/js/auth.js"></script>
     <script>
       window.roadmapAuth.requireAuth();
     </script>
+    <script src="./assets/js/roadmap.js"></script>
     <script src="./assets/js/app.js"></script>
   </body>
 </html>
