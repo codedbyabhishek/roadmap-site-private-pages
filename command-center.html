@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Command Center</title>
+    <meta
+      name="description"
+      content="Live KPI command center with red/yellow/green health alerts across all business units."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body>
+    <header class="header wrapper">
+      <div class="header-row">
+        <div>
+          <h1 id="cc-title">Command Center</h1>
+          <p id="cc-subtitle" class="subtitle"></p>
+        </div>
+        <div class="top-actions">
+          <a class="button button-ghost" href="./index.html">Blueprint</a>
+          <a class="button button-ghost" href="./scale.html">Full Scale</a>
+          <a class="button button-ghost" href="./city-plan.html">City Planner</a>
+          <button id="logout" type="button">Logout</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="wrapper">
+      <section>
+        <div class="card">
+          <h2>Portfolio Health</h2>
+          <div class="summary-row">
+            <div>
+              <p class="metric" id="total-profit">$0</p>
+              <p class="helper">Projected Monthly Profit</p>
+            </div>
+            <div>
+              <span id="overall-status" class="status-pill status-amber">YELLOW</span>
+              <p class="helper">Overall System Status</p>
+            </div>
+            <div>
+              <button id="save-kpis" type="button">Save KPI Snapshot</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Unit KPI Inputs</h2>
+        <div id="unit-forms" class="grid"></div>
+      </section>
+
+      <section>
+        <h2>Live Alerts</h2>
+        <div id="alert-list" class="timeline"></div>
+      </section>
+
+      <section>
+        <h2>Action Queue</h2>
+        <div class="card">
+          <ul id="action-queue" class="rule-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="wrapper">KPIs are browser-saved on this device for fast monthly operational reviews.</footer>
+
+    <script src="./assets/js/auth.js"></script>
+    <script>
+      window.roadmapAuth.requireAuth();
+    </script>
+    <script src="./assets/js/command-data.js"></script>
+    <script src="./assets/js/command-app.js"></script>
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
